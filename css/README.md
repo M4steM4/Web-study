@@ -1,13 +1,18 @@
-# CSS
+# **CSS**
 
 개인적으로 공부한 CSS관련 자료를 올려둔 것입니다.
 
 
-## Table of contents
-1. asd
-1. asd
+## Table of Contents
+1. [CSS Basic Convention](#CSS-Basic-Convention)
+1. [CSS Rank](#CSS-Rank)
+1. [CSS Layers](#CSS-Layers)
+1. [CSS Button Reset](#CSS-Button-Reset)
+1. []()
+
 
 ### CSS Basic Convention
+
 - 상황에 따른 미디어타입 사용, 웹 장애 or 비장애 체크
 - W3C Validation 통과를 권장
 - 여백, 줄간격 생략, 속성값이 0일경우 단위 생략, 마지막 스타일 세미콜론 생략
@@ -17,8 +22,86 @@
 - selector를 tag name으로 핸들링 금지
 
 
-### *Pseudo-elements*
-Pseudo-elements : 엘리먼트의 일부분을 선택하여 삽입된 것을 가상요소라고 함
+### CSS Rank
+
+1. Object is exposed and how it is represented.
+    - display
+    - overflow
+    - right & left
+    - list-style
+1. Location and coordinates
+    - position
+    - float
+    - z-index
+    - clear
+1. Size and white space
+    - width
+    - height
+    - padding
+    - margin
+1. Outline and background
+    - border
+    - background
+    - outline
+1. Font and sort
+    - color
+    - font
+    - text-decoration
+    - text-align
+    - vertical-align
+    - white space
+1. Content
+    -content
+
+
+### CSS Layers
+
+- Function Call
+- Recalculate Style(element style time calculate)
+- Layout(each element feature and position create)
+- Paint Setup
+- Paint(element create and input reader -> draw GPU)
+- Composite Layers(draw frame)
+
+
+### CSS Shorthand Rank
+
+- font
+`font: style variant weight size/height family`
+- background
+`background: color url(image url) repeat position attachment`
+- list
+`list-style: type position url(image url)`
+- transition
+`(web kinds)transition : property duration timing-function delay;`
+- background
+`background: color image repeat position size attachment origin(clip)`
+- border
+`border: width style color`
+- animation
+`animation : name duration delay count function direction`
+
+
+### CSS Button Reset
+
+```css
+.reset {
+    display: inline-block; /* 부모요소에서 text-align 적용 */
+    font-family: inherit; /* 글꼴 강제 상속 */
+    vertical-align: middle; /* 다른 요소 중첩시 강제 상속 */
+    cursor: pointer; /* 커서에 손가락 */
+    white-space : nowrap; /* 버튼 크기가 작아도 줄바꿈되지 않음 */
+    text-decoration : none; /* 글자 밑줄 제거 */
+    background: transparent; /* 기본 배경색 투명 */
+    outline: 0; 포커스시 외곽선 제거
+}
+```
+
+### CSS Selector
+
+#### **Pseudo-elements**
+
+*엘리먼트의 일부분을 선택하여 삽입된 것을 가상요소라고 함*
 - ::after : element 뒤에 content 추가시
 - ::before : element 앞에 content 추가시
 - ::first-child : 첫 element의 자식 요소
@@ -32,8 +115,9 @@ Pseudo-elements : 엘리먼트의 일부분을 선택하여 삽입된 것을 가
 - ::grammer-error : 문법적 오류가 있을 경우 스타일 지정
 
 
-### *가상 클래스*
-Pseudo-classes : 가상 클래스로서 특정 이벤트 시 스타일을 적용할 때 사용
+#### **Pseudo-classes**
+
+*가상 클래스로서 특정 이벤트 시 스타일을 적용할 때 사용*
 - :active : link 클릭 실행시 이벤트
 - :focus : link에 마우스 focus시 이벤트
 - :hover : link over시 이벤트
@@ -56,8 +140,7 @@ Pseudo-classes : 가상 클래스로서 특정 이벤트 시 스타일을 적용
 - :nth-of-type(n) : 부모 요소와 같은 n번째 자식 요소를 선택하여 스타일을 적용합니다
 
 
-### Background
-color image repeat position size attachment origin(clip)
+#### **Background**
 
 - linear-gradient(to~, x,x,x) :
 - attachment : 스크롤 이동시 배경 스크롤 여부[scroll, fixed, local]
@@ -71,8 +154,7 @@ color image repeat position size attachment origin(clip)
 - blend-mode : 배경 이미지 그라데이션 적용방법 선택[normal, multiply, screen, overlay, darken, lighten, color-dodge]
 
 
-### Border
-width style color
+#### **Border**
 
 - color : border 색상 설정
 - image(3) : border에 적용할 이미지 지정, url함수 사용
@@ -83,7 +165,7 @@ width style color
 - collapse : 테이블에서 tr과 td border 지정[separate, collapse]
 
 
-### Text
+#### **Text**
 
 - align : text 정렬 방식 설정[left, right, center, justify]
 - decoration : text 줄 표시[underline, overline, line-through]
@@ -93,7 +175,7 @@ width style color
 - overflow : text가 넘어갈 시 처리방법 지정[clip, ellipsis, string]
 
 
-### Font
+#### **Font**
 
 `@font-face`
 - family : font 종류를 설정
@@ -103,13 +185,13 @@ width style color
 - weight : font 두께 지정(100단위 700 = bolder, normal = 400)
 
 
-### Box
+#### **Box**
 
 - shadow : element 그림자 처리, x축-y축-번짐정도-확산정도-색상
 - sizing : padding, margin, border의 값을 모두 합쳐서 계산하도록 함(border-box)
 
 
-### Animation
+#### **Animation**
 
 `@keyframes` : animation 동작 지정{%{}%{}%{}}
 - delay : 처리 지연 시간 지정(s)
@@ -121,7 +203,7 @@ width style color
 - timing-function : animation 이동 방식 지정[linear, ease.in.out]
 
 
-### transform
+#### **Transform**
 
 - translate() : element 이동(xpx, ypx)
 - rotate() : element 회전(deg)
@@ -130,51 +212,42 @@ width style color
 - matrix() : element 조정, x간격-x비율-y비율-y간격-x시작-y시작
 
 
-### transition
+#### **Transition**
 
 - delay : transition 처리 지연 시간 지정(s)
 - duration : 함수 실행 시간을 지정(s)
 - timing-function : animation 이동 방식 지정(linear. ease.in.out)
 
 
-### etc
-{word}
--break : text를 단어마다 끊도록 설정(keep-all, break-all)
--spacing : text 단어 간격 설정(-npx ~ npx)
-{list-style}
--type : list 종류 지정(decimal, lower-alpha)
--position : list사용시 들여쓰기 지정(inside, outside)
-[caption]-side : caption 위치 지정(top, left, right, bottom)
-[cursor] : 커서 모양 지정(all-scroll, help, move, no-drop, pointer)
-[clip] : element를 자른다, x시작점-x축길이-y축길이-y시작점(px)
-[z-index] : CSS 우선순위를 설정(10단위로 주는것이 좋음)
-[outline] : border line위에 line 지정, color-style-width
-[filter] : 이미지 필터 지정[blur, brightness, grayscale, invert, saturate]
-[overflow] : element px을 벗어난 요소 show시 사용[clip, visible, scroll, auto]
-[vertical-align] : element나 문장 수직정렬, 인라인 요소에만 적용(text-top.bottom,middle, %)
+#### **ETC**
 
-block : 블록단위로 처리
-inline : 기본값으로 처리(줄바꿈 미적)
-inline-block : 요소는 inline으로 내부는 block으로
+- **word**
+    - break : text를 단어마다 끊도록 설정(keep-all, break-all)
+    - spacing : text 단어 간격 설정(-npx ~ npx)
+- **list-style**
+    - type : list 종류 지정(decimal, lower-alpha)
+    - position : list사용시 들여쓰기 지정(inside, outside)
+- caption-side : caption 위치 지정(top, left, right, bottom)
+- cursor : 커서 모양 지정(all-scroll, help, move, no-drop, pointer)
+- clip : element를 자른다, x시작점-x축길이-y축길이-y시작점(px)
+- outline : border line위에 line 지정, color-style-width
+- filter : 이미지 필터 지정[blur, brightness, grayscale, invert, saturate]
+- overflow : element px을 벗어난 요소 show시 사용[clip, visible, scroll, auto]
+- **display**
+    - block : 블록단위로 처리
+    - inline : 기본값으로 처리(줄바꿈 미적)
+    - inline-block : 요소는 inline으로 내부는 block으로
+- **position**
+    - relative : 포함된 요소안에서 위치
+    - static : 포함된 요소안에서 고정
+    - absolute : 문서내에서 위치
+    - fixed : 스크롤에도 절대적 위치
 
-relative : 포함된 요소안에서 위치
-static : 포함된 요소안에서 고정
-absolute : 문서내에서 위치
-fixed : 스크롤에도 절대적 위치
 
-### CSS shorthand rank
--font
-element { font:style variant weight size/height family}
--background
-element { background:color url(image url) repeat position attachment}
--list
-element { list-style:type position url(image url)}
--transition
-(web kinds)transition : property duration timing-function delay;
-## Flex
+### Flex
 
-### justify-content
-가로 정렬 관련
+#### **justify-content**
+*가로 정렬 관련*
 
 - flex-start : 맨 오른쪽 기준 정렬
 - flex-end : 맨 왼쪽 기준 정렬
@@ -182,7 +255,8 @@ element { list-style:type position url(image url)}
 - space-between : 가운데 기준으로 양끝정렬
 - spcae-around : 가운데 기준으로 균등정렬
 
-### align-item
+
+#### **align-item**
 
 - flex-start : 맨 윗쪽 기준 정렬
 - flex-end : 맨 아랫쪽 기준 정렬
@@ -190,7 +264,8 @@ element { list-style:type position url(image url)}
 - baseline :
 - stretch :
 
-### align-content
+
+#### **align-content**
 
 - flex-start : 맨 윗쪽 기준 정렬
 - flex-end : 맨 아랫쪽 기준 정렬
@@ -198,20 +273,24 @@ element { list-style:type position url(image url)}
 - space-between : 가운데 기준으로 세로 양끝정렬
 - spcae-around : 가운데 기준으로 세로 균등정렬
 
-### flex-direction
+
+#### **flex-direction**
 
 - row : 정방향
 - row-reverse : 역방향
 - column : 세로방향
 - column-reverse : 세로 역방향
 
-### flex-wrap
+
+#### **flex-wrap**
 
 - nowrap : 정렬 안시킴(overflow됨)
 - wrap : 폭에 맞춰서 정렬
 - wrap-reverse : 바닥 지준으로 wrap정렬
 
-### flex etc
+
+#### **flex etc**
+
 - order : 우선순위로 숫자가 높을수록 우선적으로 정렬
 - align-self : 선택된 객체만 align-items값 결정
 - flex-flow : direction + wrap
