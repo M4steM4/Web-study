@@ -1,14 +1,11 @@
 # **CSS**
 
-개인적으로 공부한 CSS관련 자료를 올려둔 것입니다.
-
-
 ## Table of Contents
 1. [CSS Basic Convention](#CSS-Basic-Convention)
 1. [CSS Rank](#CSS-Rank)
 1. [CSS Layers](#CSS-Layers)
 1. [CSS Button Reset](#CSS-Button-Reset)
-1. []()
+1. [CSS Selector](#CSS-Selector)
 
 
 ### CSS Basic Convention
@@ -20,7 +17,7 @@
 - ID는 calmelcase, class는 underscore
 - `@import`사용 금지 : 브라우저에서 이미지 로딩후 적용이 되기 때문
 - selector를 tag name으로 핸들링 금지
-
+- [moz(FireFox), webkit(Chrome, Safari), o(Opera)]-
 
 ### CSS Rank
 
@@ -231,8 +228,11 @@
 - cursor : 커서 모양 지정(all-scroll, help, move, no-drop, pointer)
 - clip : element를 자른다, x시작점-x축길이-y축길이-y시작점(px)
 - outline : border line위에 line 지정, color-style-width
+- letter-spacing : text 자간간격 설정(-n ~ n)
 - filter : 이미지 필터 지정[blur, brightness, grayscale, invert, saturate]
 - overflow : element px을 벗어난 요소 show시 사용[clip, visible, scroll, auto]
+- quotes : element 앞뒤 삽입문자 지정(“str”,”str”)
+
 - **display**
     - block : 블록단위로 처리
     - inline : 기본값으로 처리(줄바꿈 미적)
