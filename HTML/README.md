@@ -33,7 +33,7 @@ Hyper Text Markup Language
 - `.htm`은 초기 DOS시스템때문에 세문자로 확장한것 `.html`은 유닉스 운영체제
 - 속성 순서(rel > type > href,src >  target > id > name > class > data)
 - javascript 직접선언 금지
-
+- `<iframe>` 로딩시 domain이 다르면 성능저하, SEO관점에서 적합하지 않음, 화면빔 현상
 
 ### Basic HTML
 *HTML 문서 정의*
