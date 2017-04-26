@@ -37,7 +37,7 @@ Cascading Style Sheets
     - o : Opera
     - ms : Explorer
 
-<br>
+
 ### CSS Rank
 
 1. Object is exposed and how it is represented.
