@@ -2,9 +2,14 @@
 Syntactically Awesome Style Sheets
 It is CSS pre-processor(CSS extend scripting language)
 
+
 ## Table of Contents
 1. [Sass Basic Convention](#Sass-Basic-Convention)
-1. [](#)
+1. [Sass File Structure](#Sass-File-Structure)
+1. [Sass Semy Function](#Sass-Semy-Function)
+1. [Sass Mixin](#Sass-Mixin)
+1. [Color Function](#Color-Function)
+1. [List Function](#List-Function)
 
 
 ### Sass Basic Convention
@@ -91,6 +96,7 @@ It is CSS pre-processor(CSS extend scripting language)
 
 
 ### Sass Mixin
+
 - `@extend .classname` : class 상속
 - `@mixin function()` : 함수 선언
 - `@include function()` : 함수 호출
@@ -98,12 +104,17 @@ It is CSS pre-processor(CSS extend scripting language)
 - `@content` : 함수 전달시 받은 내용 로드
 
 
-### Sass Function
+### Sass Color Function
+
 - `lighten($color, $percentage)` : percent만큼 밝은 색상
 - `darken($color, $percentage)` : percent만큼 어두운 색상
 - `mix(color, $color, $percentage)`
 - `complement($color)` : RGB반전
 - `type-of($value)` : value type return
+
+
+### Sass List Function
+
 - `list-saparator($list)` : list를 나누는 기준을 반환(space, comma 등)
 - `nth($list, num)` : num번째 배열값 반환
 - `set-nth($list, num, $value)` : num번째 배열값 수정
