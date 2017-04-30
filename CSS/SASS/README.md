@@ -8,8 +8,11 @@ It is CSS pre-processor(CSS extend scripting language)
 1. [Sass File Structure](#Sass-File-Structure)
 1. [Sass Semy Function](#Sass-Semy-Function)
 1. [Sass Mixin](#Sass-Mixin)
+1. [String Function](#String-Functon)
+1. [Math Function](#Math-Function)
 1. [Color Function](#Color-Function)
 1. [List Function](#List-Function)
+1. [Map Function](#Map-Function)
 
 
 ### Sass Basic Convention
@@ -104,21 +107,56 @@ It is CSS pre-processor(CSS extend scripting language)
 - `@content` : 함수 전달시 받은 내용 로드
 
 
-### Sass Color Function
+### String Function
 
-- `lighten($color, $percentage)` : percent만큼 밝은 색상
-- `darken($color, $percentage)` : percent만큼 어두운 색상
+- `unquote()` : 따옴표 삭제
+- `str-length()` : 배열 길이 반환
+- `str-insert(string, node, index)` : 배열 요소 삽입
+- `str-index(string, substring)` : 배열 요소 위치 반환
+- `str-slice(string, num)` : 배열 자르기
+- `to-upper-case()` : 문자열 대문자화
+- `to-lower-case()` : 문자열 소문자화
+
+
+### Math Function
+
+- `percent()` :
+- `round()` : 반올림
+- `ceil()` : 올림
+- `floor()` : 내림
+- `min($list...)` : 작은수 반환
+- `max($list...)` : 큰수 반환
+- `random($list...)` : 랜덤값 반환
+
+
+### Color Function
+
+*($color, $percentage)*
+- `lighten()` : 채도 % 밝게
+- `darken()` : 채도 % 어둡게
+- `saturate()` : 명도 % 밝게
+- `desaturate()` : 명도 % 어둡게
+- `fade-in()` : 알파 % 밝게
+- `fade-out()` : 알파 % 어둡게
 - `mix(color, $color, $percentage)`
 - `complement($color)` : RGB반전
 - `type-of($value)` : value type return
 
 
-### Sass List Function
+### List Function
 
 - `list-saparator($list)` : list를 나누는 기준을 반환(space, comma 등)
+- `length()` : 길이 반환
+- `append(list, value)` : list에 value 넣음
 - `nth($list, num)` : num번째 배열값 반환
 - `set-nth($list, num, $value)` : num번째 배열값 수정
 - `remove($list, $value)` : 배열내부 값 삭제
-- `map-get($mapvalue, $key)` -> 멥변수 안에서 key의 value를 끄집어냄
-- `map-merge($mapvalue, map)`
-- `inspect($list)` -> 실제로 존재하는 list만 view
+- `inspect($list)` : 실제로 존재하는 list만 view
+
+
+### Map Function
+- `map-get($mapvalue, $key)` : 맵변수 반환
+- `map-merge($mapvalue, map)` : 맵변수 병합
+- `map-remove($mapvalue, key)` : 맵변수 삭제
+- `map-keys($mapvalue)` : 맵변수 key list로 반환
+- `map-has-key($key)` : 맵변수에 key값이 있나 확인
