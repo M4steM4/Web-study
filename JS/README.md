@@ -20,10 +20,8 @@ Java Script
 - Strict모드(`use strict`) : 안정성과 효율성을 위해 제한
 - 객체 생성자 X : 객체 개념이 생김, JS는 기본적으로 객체 반환
 - 문자 코드 표기 : UTF-8 을 이용, Ajax 외부데이터 통신시 에러 방지
-- 고계 함수 : 함수를 인자 값으로 넘겨줄수 있고 사용 가능하다
 - 변수 선언 : `var _value` 선언은 클래스 및 함수 외부에서 참조할 수 없음
 - JSON : JavaScript Object Notification 객체 리터럴 형식
-- 클로저 => 함수값을 인자로 넘기거나 함수의 작동방식을 인자로 넘겨줄 수 있음, 인자값이 없으면 외부에서 찾음
 - `document.write` : 표시 위치를 지정할 수 없어 쓰이지 않음
 - `$.isXXX` > `typeof` => `$.isXXX`가 반환값이 더 정확
 - '==' 수치만 비교 '===' 자료형까지 비교
@@ -35,6 +33,7 @@ Java Script
 - `document.createElement(“”) = create new tag`
 
 
+### non-blocking Function
 [비동기 함수]
 -전 명령의 수행이 끝나지 않아도 다음 명령을 실행
 -많은양의 요청을 빠르게 처리 가능
@@ -64,6 +63,25 @@ IIFE(immediately-invoked function expression - 즉시실행함수식)
 default parameter는 뒤쪽에
 
 
+
+콜스택 : 코드 정보 저장 스택 자료구조, 서브루틴을 실행한다음 어디로 돌아가야할지 절차를 따라가기위해 사용
+전역코드는 콜스택에 push됨
+브라우저에서는 global객체인 window객체의 프로퍼티로 들어가지만, nodeJS에선 global이라는 이름을 가진 객체로 들어감
+코드가 실행되기전에 전역변수가 호이스팅되고 undefinded값을 가짐
+ES6는함수스코프이기 때문에 함수내의 지역변수가 우선순위가 높다
+즉시실행함수(IIFE)
+{
+  let x = 10;
+  let print = () => {
+    console.log(x); //Uncaught ReferenceError: x is not defined
+    let x = 15; //If this code is not present, no error
+  };
+  print();
+}
+따라서 다음과 같은 경우엔 호이스팅이 되어있지만 let변수가 제정의 되어서 TDZ에 들어있는 상태이기 때문에 console명령실행때 오류가 난다
+
+es6에서는 const와 let이 새로운 스코프(Script)에 생성되어서 const와 let에 변수명 충돌이 이러나지 않는다.
+스코프체인은 함수가 변수에 할당시 활성화 객체가 생성되고 할당되기전 함수가 생성한 객체를 활성화객체에 담음, 할당된 함수가 실행되면 그 함수의 활성화 객체가 따로 생성되어 담아짐, 내부함수가 외부함수의 변수를 참조하고 기억하는것은 활성화 객체가 따로 생성되기 때문. 이 이외의 객체는 글로벌 오브젝트가 담당
 
 
 [JS Scope]
@@ -130,7 +148,7 @@ EX) `var ex =  /http(s)?\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/gim;`
 - `data.shift()` : 배열 앞에 요소 삭제
 - `data.toString()` : 배열 모든 요소 출력
 - `data.concat(data1, data2)` : 배열 합침
-- `data.join(' ')` : 배열 요소 특정 문자 단위로 합침
+- `data.join('')` : 배열 요소 특정 문자 단위로 합침
 - `data.reverse()` : 배열 요소 reverse
 - `data.sort(function(){})` : 함수식으로 배열 sort
 

@@ -4,6 +4,7 @@ It is CSS pre-processor(CSS extend scripting language)
 
 
 ## Table of Contents
+
 1. [Sass Basic Convention](#Sass-Basic-Convention)
 1. [Sass File Structure](#Sass-File-Structure)
 1. [Sass Semy Function](#Sass-Semy-Function)
