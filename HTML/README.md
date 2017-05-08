@@ -26,6 +26,7 @@ Hyper Text Markup Language
 ### HTML Basic Convention
 
 - `doctype`등의 정의문은 대문자로 작성
+- `<!DOCTYPE html>`은 문서 형식을 HTML5로 지정
 - 태그는 소문자로 통일, 닫는태그는 꼭 작성
 - 단일태그 종료시 `/>` 사용
 - `image`태그엔 alt 작성
