@@ -5,8 +5,9 @@ Cascading Style Sheets
 ## Table of Contents
 1. [CSS Basic Convention](#CSS-Basic-Convention)
 1. [CSS Rank](#CSS-Rank)
+1. [CSS Reset](#CSS-Reset)
 1. [CSS Layers](#CSS-Layers)
-1. [CSS Button Reset](#CSS-Button-Reset)
+1. [CSS Shorthand Rank](#CSS-Shorthand-Rank)
 1. [CSS Selector](#CSS-Selector)
     1. [Pseudo Element](#Pseudo-Element)
     1. [Pseudo Classes](#Pseudo-Classes)
@@ -14,7 +15,7 @@ Cascading Style Sheets
     1. [Border](#Border)
     1. [Text](#Text)
     1. [Font](#Font)
-    1. [BOX](#BOX)
+    1. [Box](#Box)
     1. [Animation](#Animation)
     1. [Transform](#Transform)
     1. [Transition](#Transition)
@@ -33,11 +34,14 @@ Cascading Style Sheets
 - ID use calmelcase, class use underscore
 - Do not use `@import` : It is applied after loading image in browser
 - Do not handling selector with tag name
+- `opacity` VS `rgba()`
+    - `opacity` : Inherit all element(Unchanged)
+    - `rgba()` : Not inherit
 - Vendor Prefix
-    - moz : FireFox
-    - webkit : Chrome, Safari
-    - o : Opera
-    - ms : Explorer
+    - `moz` : FireFox
+    - `webkit` : Chrome, Safari
+    - `o` : Opera
+    - `ms` : Explorer
 
 
 ### CSS Rank
@@ -70,6 +74,33 @@ Cascading Style Sheets
     - white space
 1. Content
     -content
+
+
+### CSS Reset
+*Button reset*
+
+```CSS
+.reset {
+    display: inline-block; /* Apply text-align on parents element */
+    font-family: inherit; /* Font compulsion inherit */
+    vertical-align: middle; /* Differ element compulsion inherit */
+    cursor: pointer; /* Cursor view */
+    white-space : nowrap; /* Line wrap cancle */
+    text-decoration : none; /* Remove text underline */
+    background: transparent; /* Set transparent background */
+    outline: 0 /* Remove focus outline */
+}
+```
+
+*Float reset*
+
+```CSS
+element:after {
+    content: "";
+    clear: both;
+    display: block
+}
+```
 
 
 ### CSS Layers
@@ -142,21 +173,6 @@ Cascading Style Sheets
     }
 ```
 
-
-### CSS Button Reset
-
-```CSS
-.reset {
-    display: inline-block; /* Apply text-align on parents element */
-    font-family: inherit; /* Font compulsion inherit */
-    vertical-align: middle; /* Differ element compulsion inherit */
-    cursor: pointer; /* Cursor view */
-    white-space : nowrap; /* Line wrap cancle */
-    text-decoration : none; /* Remove text underline */
-    background: transparent; /* Set transparent background */
-    outline: 0; /* Remove focus outline */
-}
-```
 
 ### CSS Selector
 
@@ -339,6 +355,15 @@ Cascading Style Sheets
 - **list-style**
     - `type` : Designate list type(decimal, lower-alpha)
     - `position` : List indent(inside, outside)
+- **display**
+    - `block` : Block element
+    - `inline` : Inline element(not new line)
+    - `inline-block` : Element inline, inside block
+- **position**
+    - `relative` : Position within embedded element
+    - `static` : Fixed within embedded element
+    - `absolute` : Location within document
+    - `fixed` : Absolute position for scrolling
 - `caption-side` : Caption position
 - `cursor` : Cursor figure
     - all-scroll
@@ -362,16 +387,6 @@ Cascading Style Sheets
     - auto
 - `quotes` : Add quotes(“str”,”str”)
 
-- **display**
-    - `block` : Block element
-    - `inline` : Inline element(not new line)
-    - `inline-block` : Element inline, inside block
-- **position**
-    - `relative` : Position within embedded element
-    - `static` : Fixed within embedded element
-    - `absolute` : Location within document
-    - `fixed` : Absolute position for scrolling
-
 
 ### Flex
 
@@ -387,9 +402,9 @@ Cascading Style Sheets
 
 #### **align-item**
 
-- `flex-start` : 맨 윗쪽 기준 정렬
-- `flex-end` : 맨 아랫쪽 기준 정렬
-- `center` : 가운데 정렬
+- `flex-start` : Align to top
+- `flex-end` : Align to bottom
+- `center` : Align to center
 - `baseline` :
 - `stretch` :
 
@@ -420,7 +435,7 @@ Cascading Style Sheets
 
 #### **flex etc**
 
-- `order` : 우선순위로 숫자가 높을수록 우선적으로 정렬
+- `order` : Designate flex element rank
 - `align-self` : 선택된 객체만 align-items값 결정
 - `flex-flow` : direction + wrap
 - `flex-grow` : flex 아이템 공간 차지 비율 지정
