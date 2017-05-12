@@ -45,14 +45,14 @@ Java Script View Component Library
 
 
 ### Life Cycle API
--컴포넌트가 DOM에 생성되기전과 후 데이터가 변하기 전과 후 에 실행되는 메소드
--componentWillMount : 컴포넌트가 돔 위에 만들어지기 전에 실행
--componentDidMount : 컴포넌트가 마치고 실행, 첫 랜더링 후 사용, 다른 js프레임워크나 라이브러리 연동
--componentWillReceiveProps : props를 받을때 실행, props에 따라 state업데이트시 유용, setState도 사용 가능
--shouldComponentUpdate : props/state 변경시 리렌더링 여부 확인(false, true로 반환, false시 변경안함)
--componentWillUpdate : 컴포넌트 업데이트 전 실행, setState는 사용 금지
--componentDidUpdate : 컴포넌트가 리렌더링을 마친 후 실행
--componentWillUnmount : 컴포넌트가 DOM에서 사라진 후 실행
+- 컴포넌트가 DOM에 생성되기전과 후 데이터가 변하기 전과 후 에 실행되는 메소드
+- `componentWillMount` : 컴포넌트가 돔 위에 만들어지기 전에 실행
+- `componentDidMount` : 컴포넌트가 마치고 실행, 첫 랜더링 후 사용, 다른 js프레임워크나 라이브러리 연동
+- `componentWillReceiveProps` : props를 받을때 실행, props에 따라 state업데이트시 유용, setState도 사용 가능
+- `shouldComponentUpdate` : props/state 변경시 리렌더링 여부 확인(false, true로 반환, false시 변경안함)
+- `componentWillUpdate` : 컴포넌트 업데이트 전 실행, setState는 사용 금지
+- `componentDidUpdate` : 컴포넌트가 리렌더링을 마친 후 실행
+- `componentWillUnmount` : 컴포넌트가 DOM에서 사라진 후 실행
 
 
 ### React Components Life Cycle Excuse Order
