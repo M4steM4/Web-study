@@ -1,13 +1,23 @@
-# **Webpack**
+# Webpack
 Webpack
 
 
 ## Table of Contents
 
+1. [Why Use Webpack?](#Why-Use-Webpack?)
 1. [Webpack Package](#Webpack-Package)
 1. [Webpack Setting File](#Webpack-Setting-File)
 1. [Webpack Dev & Release](#Webpack-Dev-&-Release)
 1. [ETC](#ETC)
+
+
+### Why Use Webpack?
+
+- Bundle only one JS file
+- Use npm on front-end code
+- Use ES6/ES7 syntax
+- Use Sass & LESS on css
+- Use HMR(Hot Module Replacement)
 
 
 ### Webpack Package
@@ -29,18 +39,20 @@ Webpack
 
 ### Webpack Setting File
 
-- `devtool` : source map & debugging
-- `entry` : JS modularization tool
-- `output` : define result folder
-    - `filename` : designate file name
+- `devtool` : Source map & debugging
+- `entry` : JS bundle file
+- `output` : Define result folder
+    - `filename` : Designate bundle file name
+    - `path` : Designate bundle file location
     - `publicPath` :
-- `plugins` : import preset
-    - `UglifyJsPlugin` : JS uglify plugin
+- `plugins` : Import preset
+    - `UglifyJsPlugin` : JS uglify plugin, Code minify
     - `HtmlWebpackPlugin` : include bundling file in html
     - `HotModuleReplacementPlugin` : HMR plugin
     - `WebpackBrowserPlugin` : browser auto open
 - `postcss` : add vender prefix in style sheet
 - `module` : options that affect files
+    - `test` : 정규식
     - `loaders` : modularization function
 - `devServer` : module setting
 
