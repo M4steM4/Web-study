@@ -18,7 +18,8 @@ It is CSS pre-processor(CSS extend scripting language)
 
 ### Sass Basic Convention
 
-- Sass가 포괄적인 의미
+- Sass는 전처리기와 문법 두가지를 의미
+- Sass와 SCSS는 동일 의미
 - Sass는 중괄호와 세미콜론 제거를 위해 들여쓰기에 의존
 - KISS principle(Keep It Simple Stupid)
 - `@charset 'utf-8'` : 인코딩

@@ -56,10 +56,11 @@ Single Thread non-blocking Language
 - 블록범위 내에서 함수선언 x, 임시함수 사용
 - 함수 파라미터 변형 x : object인 경우 문제 발생
 - destructuring : 비구조화 할당
-- template strings : 문자열 채워넣기(ex : ${value})
+- template strings : 문자열 채워넣기(ex : `${value}`)
 - Do not use generator, that isn't transpile to ES5
 - `setTimeout()` : 내부 함수는 global범위 실행(Because refer window object)
 - JS에서 모든 함수가 일급 객체(익명함수 == 람다함수)
+- JS file under location : Improve HTML Rendering speed, JS resource require 지연 차단
 
 
 ### JS
@@ -87,11 +88,12 @@ Single Thread non-blocking Language
 
 #### **Closure**
 
+- 구조 혹은 패턴으로 만들어진 환경을 기억하는것
+- 비공개 내부변수를 갖는 함수 인스턴스 생성자
 - 클로저 자신, 전역변수, 이미 할당된 외부 함수의 독립적인 변수를 참조하는 함수
 - 함수 생성시 자신과 동일한 스코프 체인 사용
 - 스코프 체인으로 내부 함수가 외부 함수의 변수, 파라미터 접근
-- 함수가 만들어진 환경을 기억
-- 클로저는 참조 접근
+- 클로저는 참조 접근, 독립된 변수공간
 - 자기 스코프보다 상위 스코프의 자유변수는 바인딩하지 않음(상위 스코프 탐색 비용, 변수 저장 비용)
 
 
@@ -110,6 +112,7 @@ Single Thread non-blocking Language
 
 - 코드 정보 저장 스택 자료 구조
 - 서브루틴 후 코드 동작 절차 추적에 사용
+- lexical 특성 : 전역레벨보다 함수레벨이 우선
 - 전역 코드는 콜스택에 push됨
 - 브라우저에서는 global객체인 window객체의 프로퍼티로 들어가지만, nodeJS에선 global이라는 이름을 가진 객체로 들어감
 - 함수선언 : 콜스택에서 확인 용이, 함수이름 hoisting, ArrowFunction
