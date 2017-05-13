@@ -1,5 +1,5 @@
 # Webpack
-Webpack
+Module Builder
 
 
 ## Table of Contents
