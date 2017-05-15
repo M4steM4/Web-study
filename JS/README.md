@@ -32,7 +32,7 @@ Single Thread non-blocking Language
 - `var`는 할당 없이 스코프에 호이스트, `const`, `let`은 TDZ라는 새로운 할당
 - 함수 내부 지역변수가 우선순위가 가장 높음
 - const, let은 다른 스코프가 생성되어 변수명 충돌 없음
-- default parameter는 뒤에
+- default parameter는 뒤
 
 
 ### JS Basic Convention
@@ -61,6 +61,7 @@ Single Thread non-blocking Language
 - `setTimeout()` : 내부 함수는 global범위 실행(Because refer window object)
 - JS에서 모든 함수가 일급 객체(익명함수 == 람다함수)
 - JS file under location : Improve HTML Rendering speed, JS resource require 지연 차단
+- Can not refer in IIFE on exterior, If return object binded, can refer that
 
 
 ### JS
