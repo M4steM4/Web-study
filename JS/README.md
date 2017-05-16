@@ -19,6 +19,7 @@ Single Thread non-blocking Language
 1. [String Function](#String-Funtion)
 1. [Regular Expression Function](#Regular-Expression-Function)
 1. [Array Function](#Array-Function)
+1. [Browser History API](#Browser-History-API)
 1. [Higher-order Function](#Higher-order Function)
 
 
@@ -203,6 +204,18 @@ var ex =  /http(s)?\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/gim;
 - `data.join('')` : 배열 요소 특정 문자 단위로 합침
 - `data.reverse()` : 배열 요소 reverse
 - `data.sort(function(){})` : 함수식으로 배열 sort
+
+
+### Browser History API
+
+- `window.history.back()` : 뒤로가기
+- `window.history.forward()` : 앞으로 가기
+- `window.history.go(num)` : 원하는 위치 이동
+- `window.history.length` : return page index
+- `window.onpopstate(event)` : pop state event
+- `window.addEventListener(“event”, data, boolean)` :
+- `history.pushState(stateObj, title, url)` : create new history
+- `history.replaceState()` : change present history
 
 
 ### Higher-order Function

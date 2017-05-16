@@ -14,7 +14,7 @@ Module Builder
 ### Why Use Webpack?
 
 - Bundle only one JS file
-- Use npm on front-end code
+- Use npm plugin on front-end code
 - Use ES6/ES7 syntax
 - Use Sass & LESS on css
 - Use HMR(Hot Module Replacement)
@@ -40,11 +40,11 @@ Module Builder
 ### Webpack Setting File
 
 - `devtool` : Source map & debugging
-- `entry` : JS bundle file
-- `output` : Define result folder
-    - `filename` : Designate bundle file name
+- `entry` : JS bundle file entry point(Can use ['file.js', 'files.js'])
+- `output` : Define result file route
+    - `filename` : Designate bundle file name([name] : entry key value)
     - `path` : Designate bundle file location
-    - `publicPath` :
+    - `publicPath` : Designate bundle file server location
 - `plugins` : Import preset
     - `UglifyJsPlugin` : JS uglify plugin, Code minify
     - `HtmlWebpackPlugin` : include bundling file in html
