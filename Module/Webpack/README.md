@@ -8,6 +8,7 @@ Module Builder
 1. [Webpack Package](#Webpack-Package)
 1. [Webpack Setting File](#Webpack-Setting-File)
 1. [Webpack Dev & Release](#Webpack-Dev-&-Release)
+1. [About Webpack2](#About-Webpack2)
 1. [ETC](#ETC)
 
 
@@ -22,19 +23,19 @@ Module Builder
 
 ### Webpack Package
 
-- `babel-core` : ES6 syntax compile
+- `babel-core` : ES6 syntax compile to ES5
 - `babel-preset-latest` : ES5~ES7 plugin preset
-- `babel-loader` : connect webpack & babel
-- `html-webpack-plugin` : include bundling JS file
-- `style-loader, css-loader` : import CSS file
-- `node-sass, sass-loader` : import Sass file
-- `postcss-loader, autoprefixer` : CSS(Sass) file auto vender prefix
+- `babel-loader` : Connect webpack & babel loader
+- `html-webpack-plugin` : Include bundling JS file
+- `style-loader, css-loader` : Import CSS file
+- `node-sass, sass-loader` : Import Sass file
+- `postcss-loader, autoprefixer` : Auto vender prefix on CSS(Sass) file
 - `raw-loader` : html file Hot reload
-- `webpack-browser-plugin` : auto open web browser after bundling
-- `extract-text-webpack-plugin` : plugin for except style sheet
-- `webpack-strip` : delete debugging log
-- `clean-webpack-plugin` : plugin for delete release directory
-- `url-loader, file-loader` : font & image module
+- `webpack-browser-plugin` : Auto open web browser after bundling
+- `extract-text-webpack-plugin` : Plugin for except style sheet
+- `webpack-strip` : Delete debugging log
+- `clean-webpack-plugin` : Plugin for delete release directory
+- `url-loader, file-loader` : Font & image module
 
 
 ### Webpack Setting File
@@ -47,27 +48,37 @@ Module Builder
     - `publicPath` : Designate bundle file server location
 - `plugins` : Import preset
     - `UglifyJsPlugin` : JS uglify plugin, Code minify
-    - `HtmlWebpackPlugin` : include bundling file in html
-    - `HotModuleReplacementPlugin` : HMR plugin
+    - `HtmlWebpackPlugin` : Include bundling file in html
+    - `HotModuleReplacementPlugin` : HMR plugin(Use --hot option)
     - `WebpackBrowserPlugin` : browser auto open
-- `postcss` : add vender prefix in style sheet
-- `module` : options that affect files
-    - `test` : 정규식
-    - `loaders` : modularization function
-- `devServer` : module setting
-
+    - `LoaderOptionsPlugin` : Option include on loader
+    - `DefinePlugin` : Designate compile time
+    - `BannersPlugin` :
+	- `IgnorePlugin` :
+	- `EnvironmentPlugin` :
+	- `ContextReplacementPlugin` :
+- `postcss` : Add vender prefix in style sheet
+- `module` : Module handling option
+    - `loader` : import node moudle
+        - `test` : Regular expression
+        - `option` : Apply options preset
+        - `exclude` : Define exclude folder or file
+- `resolve` :
 
 ### Webpack Dev & Release
 
-- dev file need source map
-- source uglify increase bundling time
+- Dev file need source map
+- Source uglify increase bundling time
 - HTML file hot reload
-- if export style sheet, can not use HMR
+- If export style sheet, can not use HMR
+
+
+### About Webpack2
 
 
 ### ETC
 
-- `providePlugin` : `$` forced injection
+- `providePlugin` : `$` Forced injection
 - `dashboard` : webpack neat view
 - `cheap-module-source-map` : 배포시 가장 용량이 작음
 - `inline-source-map` : debugging, log, bundling time for dev
