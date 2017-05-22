@@ -11,6 +11,9 @@ Cascading Style Sheets
 1. [CSS Selector](#CSS-Selector)
     1. [Pseudo Element](#Pseudo-Element)
     1. [Pseudo Classes](#Pseudo-Classes)
+    1. [Attribute Selector](#Attribute-Selector)
+    1. [Combinator Selector](#Combinator-Selector)
+1. [CSS Style](#CSS-Style)
     1. [Background](#Background)
     1. [Border](#Border)
     1. [Text](#Text)
@@ -128,7 +131,7 @@ element:after {
 `background: color url(image url) repeat position attachment`
 ```CSS
     .element {
-        background : transparent url(image.jpg) no-repeat center scroll;
+        background : transparent url(image.jpg) no-repeat center center fixed;
     }
 ```
 - List-style
@@ -215,6 +218,27 @@ element:after {
 - `:nth-last-of-type(n)` : Select nth last child element like parents element
 
 
+#### **Attribute Selector**
+
+- `tag[attribute]` : Select element with assigned attribute
+- `tag[attribute=value]` : Select same element with assigned attribute's value
+- `tag[attribute~=value]` : Select include element with assigned attribute's value
+- `tag[attribute^=value]` : Select start element with assigned attribute's value
+- `tag[attribute&=value]` : Select end element with assigned attribute's vlaue
+- `tag[attribute*=value]` : Select same element with assigned attribute's value
+
+
+#### **Combinator Selector**
+
+- `tag1 tag2` : Select descendant element
+- `tag1 > tag2` : Select child element
+- `tag1 + tag2` : Select abjacent sibling element
+- `tag1 ~ tag2` : Select general sibling element
+-
+
+
+### CSS Style
+
 #### **Background**
 
 - `linear-gradient(to~, x,x,x)` : Insert background gradation
@@ -262,6 +286,8 @@ element:after {
     - solid
     - double
     - groove
+    - ridge
+    - outset
 - `width` : Element width
     - thin(100)
     - thick(200)
@@ -293,6 +319,7 @@ element:after {
     - clip
     - ellipsis
     - string
+- `line-height` : Text height
 
 
 #### **Font**
@@ -331,38 +358,49 @@ element:after {
 
 #### **Transform**
 
-- `translate()` : Element movement(x, y px)
+- `translate(x, y)` : Element movement(x, y px)
 - `rotate()` : Element turn(deg)
-- `scale()` : Element size
+- `scale(x, y)` : Element size up
 - `skew()` : Element turn(xdeg, ydeg)
+- `rotate(angle)` : Element turn(angle deg)
 - `matrix()` : Element set (x간격 x비율 y비율 y간격 x시작 y시작)
 
 
 #### **Transition**
 
+- `property` : Define transition element or attribute
 - `delay` : Transition delay time(s)
 - `duration` : function moving time(s)
 - `timing-function` : Animation movement option
+    - `ease` : slow - fast - slow
+    - `linear` : uniform motion
+    - `ease-in` : slow - uniform motion
+    - `ease-out` : uniform motion - slow
+    - `ease-in-out` : same `ease`
 
 
 #### **ETC**
 
 - **word**
+    - `wrap` : Text wrap
     - `break` : Word break
         - keep-all
         - break-all
     - `spacing` : Designate text interval(-npx ~ npx)
+
 - **list-style**
     - `type` : Designate list type(decimal, lower-alpha)
     - `position` : List indent(inside, outside)
+
 - **display**
     - `block` : Block element
     - `inline` : Inline element(not new line)
-    - `inline-block` : Element inline, inside block
+    - `inline-block` : Element inline, inside block, center float
+
 - **position**
     - `relative` : Position within embedded element
     - `static` : Fixed within embedded element
-    - `absolute` : Location within document
+    - `absolute` : Location(root) within document
     - `fixed` : Absolute position for scrolling
 - `caption-side` : Caption position
 - `cursor` : Cursor figure
@@ -371,8 +409,14 @@ element:after {
     - move
     - no-drop
     - pointer
-- `clip` : Cut element(x시작점 x축길이 y축길이 y시작점)
+- `white-space` : Designate wrap & line break
+    - nowrap
+    - pre
+    - pre-wrap
+    - pre-line
+- `clip` : Cut element(x, x length, y length, y)
 - `outline` : Designate outline
+- `quotes` : Add quotes(“str”,”str”)
 - `letter-spacing` : Designate text interval spacing
 - `filter` : Image filter
     - blur
@@ -385,7 +429,6 @@ element:after {
     - visible
     - scroll
     - auto
-- `quotes` : Add quotes(“str”,”str”)
 
 
 ### Flex

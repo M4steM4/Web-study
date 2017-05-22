@@ -218,6 +218,19 @@ var ex =  /http(s)?\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/gim;
 - `history.replaceState()` : change present history
 
 
+### File API
+*fs = require('fs'), fd = file directory, [en] = [encoding], [cal] = [callback]*
+- `readFile(filename, [en], [cal])` : Read file
+- `fs.writeFile(filename, data, [en], [cal])` : Write file
+- `open(path, mode, [cal])` : Open file
+- `close('fd, [cal]')` : Close file
+- `mkdir(path, [cal])` : Make directory
+- `rmdir(path, [cal])` : Remove directory
+- `rename(path1, path2, [cal])` : Rename file name
+- `chmod('path, mode, [cal]')` : Designate file permissions
+
+
+
 ### Higher-order Function
 
 - `data.reduce(func, sumVal)` : data를 func해 val에 합침
