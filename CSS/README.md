@@ -479,7 +479,8 @@ element:after {
 #### **flex etc**
 
 - `order` : Designate flex element rank
-- `align-self` : 선택된 객체만 align-items값 결정
+- `align-self` : 속성값 우선 정렬
 - `flex-flow` : direction + wrap
 - `flex-grow` : flex 아이템 공간 차지 비율 지정
 - `flex-shrink` : flex 컨테이너 아이템 축소 비율
+- `flex-basis` : Designate flex basic width
