@@ -1,16 +1,24 @@
-MVC
-
+#MVC
 Model View Controller
-Programming Architecture pattern
+Programming Architecture Pattern
 
 
+## Table of Contents
 
-Application develop design pattern
+1. [About MVC](#About-MVC)
 
-1.User control controller
-2.Controller load Model
-3.Model update data on View
-4.View show information to User
+
+### About MVC
+
+- Application develop design pattern
+
+
+### MVC motion
+
+- 1.User control controller
+- 2.Controller load Model
+- 3.Model update data on View
+- 4.View show information to User
 
 Controller : Identify user request input url
 find request data to model
