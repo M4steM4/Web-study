@@ -4,7 +4,7 @@ Design tool
 
 ## Table of Contents
 
-1. [Photoshop](#Photoshop)
+1. [About Photoshop](#About-Photoshop)
 
 
 ### About Photoshop

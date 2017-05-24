@@ -4,6 +4,7 @@ Responsive Web Design Front-end Framework
 
 ## Table of Contents
 1. [Bootstrap Basic Convention](#Bootstrap-Basic-Convention)
+1. [Bootstrap Advantage](#Bootstrap-Advantage)
 
 
 ### Bootstrap Basic Convention

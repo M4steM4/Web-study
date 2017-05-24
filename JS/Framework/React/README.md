@@ -4,7 +4,7 @@ Java Script View Component Library
 
 ## Table of Contents
 
-1. [Whar is React?](#What-is-React?)
+1. [Why is React?](#What-is-React?)
 1. [](#)
 1. [](#)
 1. [](#)
