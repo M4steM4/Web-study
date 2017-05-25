@@ -1,5 +1,5 @@
 # yarn
-Package manager for JS
+JavaScript Package Manager
 
 
 ## Table of Contents
@@ -8,3 +8,14 @@ Package manager for JS
 
 
 ### About yarn
+
+- JS project build
+- More secure than npm
+
+
+### How Can Use
+
+- `npm install -g yarn` : yarn install
+- `yarn self-update` : yarn update
+- `yarn init` : Create yarn package.json
+- `yarn add [package]@[version]` : Add package
