@@ -1,5 +1,5 @@
 # Mocha
-JS Testing
+JavaScript Testing Tool
 
 
 ## Table of Contents
@@ -8,3 +8,24 @@ JS Testing
 
 
 ### About Mocha
+
+
+### How Can Use
+
+- `npm install -g mocha` : mocha install
+- `mocha file.js` : testing start
+- `mocha --reporter [option]` :
+
+### Assertions
+
+- should.js : BDD style
+- expect.js : `expect()` style assertions
+- chai : `expect()`, `assert()` and should style assertions
+
+
+### Hooks
+
+- `before(function)` : Before start code area
+- `after(function)` : After start code area
+- `beforeEach(function)` : Before start each code
+- `afterEach(function)` : After start each code
