@@ -16,6 +16,14 @@ JavaScript Testing Tool
 - `mocha file.js` : testing start
 - `mocha --reporter [option]` :
 
+
+### Create Mocha file
+**('naming', function())**
+
+- `describe()` : Create test suite
+- `it()` : Create test code
+
+
 ### Assertions
 
 - should.js : BDD style
