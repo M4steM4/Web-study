@@ -5,6 +5,8 @@ Single Thread non-blocking Language
 
 ## Table of Contents
 
+1. [How It Works](#How-It-Works)
+1. [JS History](#JS-History)
 1. [JS Value Convention](#JS-Value-Convention)
 1. [JS Basic Convention](#JS-Basic-Convention)
 1. [JS](#JS)
@@ -23,6 +25,29 @@ Single Thread non-blocking Language
 1. [Higher-order Function](#Higher-order Function)
 
 
+### How It Works
+
+1. Webpage request to server
+2. Accept response
+3. View on browser
+- Browser response html, css, js file
+- Html, css file parsing to DOM, CSSOM on randering engine
+- When HTML parser meet script tag, stop DOM create process
+- HTML parser pass control permission to JS engine
+- It is meening about [Create DOM delay] by script tag location
+
+
+### JS History
+
+- JavaScript be developed in 1995 by Brendan Eich(Nescape) for webpage script language
+- Nescape require standardization to Ecma International
+
+- In 1997 July, ECMA-262 complete to ECMAScript
+- In 1999, ECMAScript 3(ES3) was release
+- In 2009, ECMAScript 5(ES5) was release with HTML5
+- In 2015, ECMAScript 6(ES6) was release with let keyword, module system, Arrow Function, class system
+
+
 ### JS Value Convention
 
 - `const` : 한번 할당 변수, block scope
@@ -34,6 +59,7 @@ Single Thread non-blocking Language
 - 함수 내부 지역변수가 우선순위가 가장 높음
 - const, let은 다른 스코프가 생성되어 변수명 충돌 없음
 - default parameter는 뒤
+- value type : boolean, Number, String, Object
 
 
 ### JS Basic Convention
