@@ -36,7 +36,6 @@ It is CSS pre-processor(CSS extend scripting language)
 - 전역 변수 : `!global`
 - 불변 변수 : 대문자 & `_`
 - 매개 변수 : `$value...`으로 받으면 리스트화
-- 변수 대입 : `#{$value}`
 - null대신 not
 - lighten과 darken보다 mix를 사용
 - partial기능 : import시 `_`파일은 css파일로 변환시 컴파일안함
