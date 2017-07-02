@@ -4,7 +4,11 @@ JavaScript Auto Build Tool
 
 ## Table of Contents
 
-1. [Gulp](https://github.com/M4steM4/Web-study/tree/master/JS/Build/Gulp)
+1. [About Gulp](#About-Gulp)
+1. [Why Use Gulp](#Why-Use-Gulp)
+
+
+### About Gulp
 
 
 ### Why Use Gulp?
