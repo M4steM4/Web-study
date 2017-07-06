@@ -440,7 +440,7 @@ element:after {
 - `flex-end` : Align to left
 - `center` : Align to center
 - `space-between` : 가운데 기준으로 양끝 정렬
-- `spcae-around` : 가운데 기준으로 균등 정렬
+- `space-around` : 가운데 기준으로 균등 정렬
 
 
 #### **align-item**

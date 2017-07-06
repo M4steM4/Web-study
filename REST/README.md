@@ -1,10 +1,15 @@
-# REST API
+# Restful API
 Representational State Transfer
 
 
 ## Table of Contents
 
 1. [About Rest](#About-Rest)
+1. [Rest Configuration](#Rest-Configuration)
+1. [Rest 특징](#Rest-특징)
+1. [How Design Rest](#How-Design-Rest)
+1. [URI Structure](#URI-Structure)
+1. [Http Request State Code](#Http-Request-State-Code)
 
 
 ### About Rest

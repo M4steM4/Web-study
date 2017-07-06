@@ -9,7 +9,7 @@ Single Thread non-blocking Language
 1. [JS History](#JS-History)
 1. [JS Value Convention](#JS-Value-Convention)
 1. [JS Basic Convention](#JS-Basic-Convention)
-1. [JS](#JS)
+1. [About JS](#About-JS)
     1. [non-blocking Function](#non-blocking-Function)
     1. [Hoisting](#Hoisting)
     1. [Closure](#Closure)
@@ -89,9 +89,12 @@ Single Thread non-blocking Language
 - JS에서 모든 함수가 일급 객체(익명함수 == 람다함수)
 - JS file under location : Improve HTML Rendering speed, JS resource require 지연 차단
 - Can not refer in IIFE on exterior, If return object binded, can refer that
+- JS primitive data type is immutable value
+-Js is objected script language
 
 
-### JS
+
+### About JS
 
 #### **non-blocking Function**
 
