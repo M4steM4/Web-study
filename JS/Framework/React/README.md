@@ -131,7 +131,7 @@ It is method about before and after the components are created in the DOM, data 
 - controller view가 다시 store에 state 부탁
 
 
-### Refx
+### Reflux
 
 - MVC중 M을 위해 만들어짐
 - Action과 store를 통한 model관리
