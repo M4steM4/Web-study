@@ -20,11 +20,11 @@ Programming Architecture Pattern
 - 3.Model update data on View
 - 4.View show information to User
 
-Controller : Identify user request input url
-find request data to model
-Data is reflected in the view, notified to the user
-
-Model : Model response to database table
-need to define consistently
-
-View : View is client container
+- Controller
+    1. Identify user request input url
+    1. find request data to model
+    1. Data is reflected in the view, notified to the user
+- Model
+    1. Model response to database table
+    1. need to define consistently
+- View : View is client container

@@ -33,6 +33,8 @@ Cascading Style Sheets
 - W3C Validation pass is recommended
 - Space, line spacing omitted
 - 속성값이 0일경우 단위 생략, 마지막 스타일 세미콜론 생략
+- CSS sprite : decrease request + header 중복전송 방지
+- CSS minify : 용량감소, 트래픽감소, HOL Blocking 회피
 - font `px`expression : `em` > `%` > `px` > `pt` (1em == 100% == 16px == 12pt)
 - ID use calmelcase, class use underscore
 - Do not use `@import` : It is applied after loading image in browser
