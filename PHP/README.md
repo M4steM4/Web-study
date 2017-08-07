@@ -24,12 +24,24 @@ Personal Home Page tools(PHP: Hypertext Preprocessor)
 
 - Use value : `$value`
 - Add HTML : `<?php  ?>`
-- Get type : `gettype($value)`
-- Compare value : `var_dump(compare)`
-
 
 
 ### PHP Input
 
 - Get property : `$_GET['value']`
 - Post property : `$_POST['value']`
+
+
+### PHP Type Function
+
+- Get value type : `gettype($value)`
+- Compare value : `var_dump(compare)`
+
+
+### PHP Array Function
+
+- Count : `count($value)`
+- Array push : `array_push($arr, 'value')`
+- Array merge : `array_merge($arr1, $arr2)`
+- Array pop : `array_unshift($arr, 'value')`
+- Array splice : `array_splice($arr, num, value)`
