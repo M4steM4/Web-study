@@ -30,7 +30,7 @@ Java Script View Component Library
 
 ### React 특징
 
-- Use JSX syntax & Xml
+- Use JSX(template language) syntax & Xml
 - Simplex Transmission
 - Rendering & 성능 우수
 
@@ -170,3 +170,9 @@ It is method about before and after the components are created in the DOM, data 
 provider 컴포넌트에서 리덕스 사용하도록 제공
 connect함수 옵션을 인수로 받아서 컴포넌트를 redux에 연결하는 함수 반환
 컴포넌트를 redux에 반환하는 또다른 함수(connect()(returnFunction)
+
+
+### ETC
+
+- Use flux architecture
+- react-native-router-flux

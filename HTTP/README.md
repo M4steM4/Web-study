@@ -15,6 +15,7 @@ Hyper Text Transfer Protocol
 - CORS
     - Simple/Preflight
     - Credential/Non-Credential
+- 크로스 플랫폼 : OS와 CPU에 상관없이 고유한 아키텍쳐를 따라 컴파일하는것
 
 
 ### About Web

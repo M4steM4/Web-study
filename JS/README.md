@@ -93,7 +93,7 @@ Single Thread non-blocking Language
 - Can not refer in IIFE on exterior, If return object binded, can refer that
 - JS primitive data type is immutable value
 - Js is objected script language
-
+- JS하단배치 : 브라우저의 html엔더링 속도 향상 + js리로스 응답지연으로 html렌더링 지연문제 차단
 
 
 ### About JS
@@ -122,6 +122,7 @@ Single Thread non-blocking Language
 #### **Closure**
 
 - 구조 혹은 패턴으로 만들어진 환경을 기억하는것
+- 닫힌 스코프 변수를 참조하는 함수
 - 비공개 내부변수를 갖는 함수 인스턴스 생성자
 - 클로저 자신, 전역변수, 이미 할당된 외부 함수의 독립적인 변수를 참조하는 함수
 - 함수 생성시 자신과 동일한 스코프 체인 사용
@@ -229,7 +230,7 @@ var ex =  /http(s)?\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/gim;
 - `str.search(ex)` : 정규식에 맞는 값의 위치를 반환
 - `str.match(ex)` : 정규식에 맞는 값을 반환
 - `str.replace(ex, chgstr)` : 정규식에 맞는 부분에 문자열 삽입
-- `str.split(ex)` : 정규식에 맞는 부분을 잘라 배열화
+- `str.split(ex)` : 정규식에 맞는 부분을 분해, 배열화
 
 
 ### Array Function
@@ -243,6 +244,8 @@ var ex =  /http(s)?\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/gim;
 - `data.join('')` : 배열 요소 특정 문자 단위로 합침
 - `data.reverse()` : 배열 요소 reverse
 - `data.sort(function(){})` : 함수식으로 배열 sort
+- `.some()` : 로직에 부합하는 원소가 한 개 이상인가
+- `.every()` : 모든 원소가 로직에 부합하는가
 
 
 ### Browser History API
