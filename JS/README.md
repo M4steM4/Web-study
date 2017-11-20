@@ -16,6 +16,7 @@ Single Thread non-blocking Language
     1. [Scope Chain](#Scope-Chain)
     1. [Call Stack](#Call-Stack)
     1. [Generator](#Generator)
+    1. [Immutability Object](#Immutability-Object)
 1. [JS Execution Context](#JS-Execution-Context)
 1. [Math Function](#Math-Function)
 1. [String Function](#String-Funtion)
@@ -23,6 +24,7 @@ Single Thread non-blocking Language
 1. [Array Function](#Array-Function)
 1. [Browser History API](#Browser-History-API)
 1. [Higher-order Function](#Higher-order Function)
+1. [JS Async](#JS-Async)
 
 
 ### How It Works
@@ -90,7 +92,7 @@ Single Thread non-blocking Language
 - JS file under location : Improve HTML Rendering speed, JS resource require 지연 차단
 - Can not refer in IIFE on exterior, If return object binded, can refer that
 - JS primitive data type is immutable value
--Js is objected script language
+- Js is objected script language
 
 
 
@@ -156,6 +158,14 @@ Single Thread non-blocking Language
 - 이터레이션을 제어할 수 있는 특별객체생성
 - for문을 순회할때 yield를 만날떄까지만 돌고 next()함수 호출을 기다림
 - function * 로 사용
+
+
+#### **Immutability Object**
+
+- functional programming
+- 함수선언식의 경우와는 달리 TypeError가 발생
+- 함수표현식의 경우 함수 호이스팅이 아니라 변수 호이스팅이 발생
+- 함수표현식은 함수선언식과는 달리 스크립트 로딩 시점에 VO에 함수를 저장하지 않고 runtime시에 해석되고 실행
 
 
 ### JS Execution Context
@@ -266,3 +276,9 @@ var ex =  /http(s)?\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/gim;
 - `.map(arr, function)` : arr에 객체의 data를 넣은 func의 반환값을 add(list auto parameter & return)
 - `.mapcat(arr, function)` : 다중 map에 사용
 - `.filter(arr, function)` : function대로 원하는 값을 arr에서 가져옴(조건식 무조건 비교후 제외)
+
+
+### JS Async
+*Multiprocessing webpage parsing & exterior script file download*
+- async : Execution when script download ended
+- defer : Execution when webpage parsing ended
